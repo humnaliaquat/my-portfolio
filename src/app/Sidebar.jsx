@@ -14,17 +14,12 @@ export default function Sidebar() {
           </li>
           <li>
             <Link href="/projects" className="hover:text-white">
-              Projects
+              Tech Stack
             </Link>
           </li>
           <li>
             <Link href="/contact" className="hover:text-white">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-white">
-              Linkidin
+              About
             </Link>
           </li>
         </ul>
