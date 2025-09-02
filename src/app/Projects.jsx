@@ -19,8 +19,8 @@ export default function Projects() {
     },
   ];
   return (
-    <div className="flex flex-col items-start justify-center">
-      <div className="flex flex-col justify-start bg-[#f8fafc] w-[700px] px-6 py-4 mx-auto  z-20 gap-4 mt-10">
+    <div className="flex flex-col ">
+      <div className="flex flex-col justify-start  w-[700px] px-6 py-4 mx-auto  z-20 gap-4 mt-17">
         <h1 className="font-semibold text-2xl">Projects</h1>
         <div className="flex flex-col gap-5">
           {details.map((item) => (
