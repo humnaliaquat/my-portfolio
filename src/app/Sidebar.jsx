@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Sidebar() {
@@ -18,13 +17,12 @@ export default function Sidebar() {
         });
       },
       {
-        threshold: 0.15, // trigger earlier
-        rootMargin: "-10% 0px -70% 0px",
+        threshold: 0.2,
+        rootMargin: "-20% 0px -60% 0px",
       }
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
@@ -36,22 +34,26 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 h-screen w-30 z-20 bg-transparent flex flex-col items-center justify-center">
-      <ul className="flex flex-col space-y-6 text-gray-400">
-        {links.map(({ href, label }) => (
-          <li key={href}>
-            <a
-              href={href}
-              className={`transition-colors duration-200 ${
-                active === href.substring(1)
-                  ? "text-black  font-semibold"
-                  : "text-gray-400 hover:text-white"
-              }`}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
+    <nav className="fixed bottom-6 left-1/2 z-20 -translate-x-1/2">
+      <ul className="flex items-center gap-2 rounded-full border border-white/10 bg-black/70 px-4 py-2 backdrop-blur-md shadow-lg">
+        {links.map(({ href, label }) => {
+          const isActive = active === href.substring(1);
+
+          return (
+            <li key={href}>
+              <a
+                href={href}
+                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                  isActive
+                    ? "bg-white text-gray-900 shadow"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

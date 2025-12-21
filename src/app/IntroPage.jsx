@@ -2,42 +2,56 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import { Sun, Moon, MoveUpRight, MoveRight } from "lucide-react";
+import { Sun, Moon, MoveUpRight, MoveRight, Flower } from "lucide-react";
+import TextType from "./TextType";
 
 export default function IntroPage() {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <section className="flex flex-col " id="home">
-      <div className="flex flex-col justify-start items-start w-[700px] px-6 py-1 mx-auto z-20 mt-20 gap-2">
+    <section className="flex flex-col text-gray-400 " id="home">
+      <div className="flex flex-col justify-start items-start w-[600px] px-6 py-1 mx-auto z-20 mt-20 gap-2">
         {/* Profile Image Wrapper */}
         <div className="flex justify-between w-full">
-          <div className="w-25 h-25 rounded-full overflow-hidden flex">
+          <div className="w-22 h-22 rounded-full overflow-hidden flex">
             <Image
               src="/hanii.png"
               alt="my pic"
-              width={128}
-              height={128}
+              width={120}
+              height={120}
               className="object-cover w-full h-full object-[center_40%]"
             />
           </div>
-          <button
-            className="flex justify-center rounded items-center hover:bg-gray-200 w-8 h-8 cursor-pointer"
-            onClick={() => setIsDark(!isDark)}
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+          <div className="   flex items-center gap-2 px-4 text-gray-300   rounded-full text-sm font-medium">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            Available for work
+          </div>
         </div>
 
-        <h3 className="text-2xl font-medium ">Hey I'm Hamna</h3>
-        <div className="text-gray-900 gap-3 mt-3 justify-start flex-col flex items-start w-full">
-          <p>
-            A BSCS student and Full-Stack Developer, working with the MERN stack
-            and Next.js.
-          </p>
-          <p>
-            Focused on building clean, responsive, and user-friendly web
-            applications while continuously exploring modern web technologies.
+        <h3 className="text-2xl font-bold text-gray-300 inline-flex items-center gap-3">
+          Hey, Hamna here
+        </h3>
+        <TextType
+          className="text-sm text-blue-300"
+          text={[
+            "Software Engineer",
+            "MERN Developer",
+            "BS Final Year Student",
+          ]}
+          typingSpeed={60}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        />
+        <div className="text-gray-300 gap-3 mt-3 justify-start flex-col text-sm flex items-start w-full">
+          <p className="text-sm text-gray-300 leading-relaxed max-w-2xl">
+            I build modern, responsive web applications using Next.js and the
+            MERN stack, with a strong focus on clean code, intuitive user
+            experiences, and high performance constantly exploring the latest
+            tools and techniques to create elegant digital solutions.
           </p>
         </div>
 
@@ -45,7 +59,7 @@ export default function IntroPage() {
           {/* Email Button */}
           <a
             href="mailto:your@email.com"
-            className="flex items-center justify-between border border-black text-black px-6 py-1 rounded w-[84%] transition-colors duration-200"
+            className="flex items-center justify-between border border-gray-200 text-gray-300 px-6 py-1 rounded w-[84%] transition-colors duration-200"
           >
             <span className="flex items-center">
               <FaEnvelope size={20} className="mr-2" />
@@ -59,7 +73,7 @@ export default function IntroPage() {
             href="https://linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center border border-black text-black px-2 py-1 rounded transition-colors duration-200"
+            className="flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-1 rounded transition-colors duration-200"
           >
             <FaLinkedin size={20} />
           </a>
@@ -69,7 +83,7 @@ export default function IntroPage() {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center border border-black text-black px-2 py-1 rounded transition-colors duration-200"
+            className="flex items-center justify-center border border-gray-300 text-black px-2 py-1 rounded transition-colors duration-200"
           >
             <FaGithub size={20} />
           </a>
