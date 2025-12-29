@@ -39,7 +39,7 @@ export default function IntroPage() {
           text={[
             "Software Engineer",
             "MERN Developer",
-            "BS Final Year Student",
+            "BSCS Final Year Student",
           ]}
           typingSpeed={60}
           pauseDuration={1500}
@@ -59,13 +59,22 @@ export default function IntroPage() {
           {/* Email Button */}
           <a
             href="mailto:your@email.com"
-            className="flex items-center justify-between border border-gray-200 text-gray-300 px-6 py-1 rounded w-[84%] transition-colors duration-200"
+            className="group relative flex items-center justify-between border border-gray-200 text-gray-300 px-6 py-2 rounded w-[84%]
+             transition-transform duration-200 hover:-translate-y-1 hover:border-white"
           >
-            <span className="flex items-center">
-              <FaEnvelope size={20} className="mr-2" />
+            <span className="flex items-center gap-2 text-gray-300 transition-colors duration-200 group-hover:text-blue-400">
+              <FaEnvelope
+                size={20}
+                className="transition-colors duration-200 group-hover:text-blue-400"
+              />
               Email Me
             </span>
-            <MoveUpRight size={20} />
+
+            {/* arrow that slides horizontally */}
+            <MoveRight
+              size={20}
+              className="absolute right-5 top-1/2 -translate-y-1/2 transition-transform duration-300 ease-out group-hover:translate-x-2 group-hover:text-blue-400"
+            />
           </a>
 
           {/* LinkedIn Button */}
@@ -73,19 +82,26 @@ export default function IntroPage() {
             href="https://linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-1 rounded transition-colors duration-200"
+            className="group flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-2 rounded
+             transition-all duration-200 hover:-translate-y-0.5 "
           >
-            <FaLinkedin size={20} />
+            <FaLinkedin
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 "
+            />
           </a>
 
-          {/* GitHub Button */}
           <a
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center border border-gray-300 text-black px-2 py-1 rounded transition-colors duration-200"
+            className="group flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-2 rounded
+             transition-all duration-200 hover:-translate-y-0.5 "
           >
-            <FaGithub size={20} />
+            <FaGithub
+              size={20}
+              className="transition-transform duration-200 group-hover:scale-110 group-hover:text-gray-400"
+            />
           </a>
         </div>
       </div>
