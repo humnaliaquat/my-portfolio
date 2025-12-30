@@ -5,7 +5,7 @@ import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 import {
   SiMongodb,
   SiNextdotjs,
-  SiExpress,
+  SiTypescript,
   SiTailwindcss,
 } from "react-icons/si";
 import { ChevronRight } from "lucide-react";
@@ -15,7 +15,11 @@ export default function TechStack() {
     { name: "React JS", icon: FaReact, link: "https://reactjs.org/" },
     { name: "MongoDB", icon: SiMongodb, link: "https://www.mongodb.com/" },
     { name: "Node JS", icon: FaNodeJs, link: "https://nodejs.org/" },
-    { name: "Express", icon: SiExpress, link: "https://expressjs.com/" },
+    {
+      name: "TypeScript",
+      icon: SiTypescript,
+      link: "https://www.typescriptlang.org/",
+    },
     { name: "Next JS", icon: SiNextdotjs, link: "https://nextjs.org/" },
     {
       name: "Tailwind CSS",
@@ -25,7 +29,7 @@ export default function TechStack() {
   ];
 
   return (
-    <section id="tech-stack" className="flex min-h-screen flex-col">
+    <section id="tech-stack" className="flex  flex-col">
       <div className="flex flex-col justify-start w-[600px] px-6 py-4 mx-auto z-20 gap-8 mt-20">
         <h1 className="font-semibold text-2xl text-white">Tech Stack</h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
@@ -37,7 +41,8 @@ export default function TechStack() {
                 href={tool.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/20
+                className="group flex items-center justify-between gap-3 p-6    bg-gradient-to-br from-white/10 to-white/5
+          backdrop-blur-xl border border-white/10 rounded-xl 
                            shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
               >
                 <div className="flex items-center gap-3">

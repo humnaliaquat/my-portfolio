@@ -2,7 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import { Sun, Moon, MoveUpRight, MoveRight, Flower } from "lucide-react";
+import { Sun, Moon, MoveUpRight, MoveRight, Music, Flower } from "lucide-react";
+
 import TextType from "./TextType";
 
 export default function IntroPage() {
@@ -22,12 +23,41 @@ export default function IntroPage() {
               className="object-cover w-full h-full object-[center_40%]"
             />
           </div>
-          <div className="   flex items-center gap-2 px-4 text-gray-300   rounded-full text-sm font-medium">
+          <div className="flex items-center gap-3 px-4 text-gray-300 rounded-full text-sm font-medium">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
-            Available for work
+            Available for new projects
+            {/* Music icon */}
+            {/* Floating Music Button */}
+            <a
+              href="https://open.spotify.com/track/5E30LdtzQTGqRvNd7l6kG5?si=ddb2580971234208"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="fixed top-6 right-6 z-50 group"
+            >
+              <div
+                className="flex items-center justify-center w-10 h-10 rounded-full
+    border  text-gray-300 backdrop-blur
+    bg-black/40
+    transition-all duration-300
+    hover:scale-110 border-white/20
+              hover:bg-blue-500/20 hover:border-blue-400"
+              >
+                <Music size={18} />
+              </div>
+
+              {/* Tooltip */}
+              <span
+                className="absolute right-12 top-1/2 -translate-y-1/2
+    whitespace-nowrap text-xs text-gray-300
+    opacity-0 group-hover:opacity-100
+    transition-opacity duration-300"
+              >
+                Now playing
+              </span>
+            </a>
           </div>
         </div>
 
@@ -59,10 +89,11 @@ export default function IntroPage() {
           {/* Email Button */}
           <a
             href="mailto:your@email.com"
-            className="group relative flex items-center justify-between border border-gray-200 text-gray-300 px-6 py-2 rounded w-[84%]
-             transition-transform duration-200 hover:-translate-y-1 hover:border-white"
+            className="group relative flex items-center justify-between px-6 py-2 rounded w-[84%]
+             transition-transform duration-200 hover:-translate-y-1    bg-white/5 text-gray-200 border border-white/20
+              hover:bg-blue-500/20 hover:border-blue-400"
           >
-            <span className="flex items-center gap-2 text-gray-300 transition-colors duration-200 group-hover:text-blue-400">
+            <span className="flex items-center gap-2 text-gray-300 transition-colors duration-200 group-hover:text-blue-400 ">
               <FaEnvelope
                 size={20}
                 className="transition-colors duration-200 group-hover:text-blue-400"
@@ -73,7 +104,7 @@ export default function IntroPage() {
             {/* arrow that slides horizontally */}
             <MoveRight
               size={20}
-              className="absolute right-5 top-1/2 -translate-y-1/2 transition-transform duration-300 ease-out group-hover:translate-x-2 group-hover:text-blue-400"
+              className="absolute right-5 top-1/2 -translate-y-1/2 transition-transform duration-300 ease-out group-hover:translate-x-2 "
             />
           </a>
 
@@ -82,8 +113,9 @@ export default function IntroPage() {
             href="https://linkedin.com/in/yourprofile"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-2 rounded
-             transition-all duration-200 hover:-translate-y-0.5 "
+            className="group flex items-center justify-center   px-2 py-2 rounded   bg-white/5 text-gray-200 border border-white/20
+             transition-all duration-200 hover:-translate-y-0.5 
+              hover:bg-blue-500/20 hover:border-blue-400"
           >
             <FaLinkedin
               size={20}
@@ -95,8 +127,9 @@ export default function IntroPage() {
             href="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center border border-gray-300 text-gray-300 px-2 py-2 rounded
-             transition-all duration-200 hover:-translate-y-0.5 "
+            className="group flex items-center justify-center  px-2 py-2 rounded   bg-white/5 text-gray-200 border 
+             transition-all duration-200 hover:-translate-y-0.5 border-white/20
+              hover:bg-blue-500/20 hover:border-blue-400"
           >
             <FaGithub
               size={20}

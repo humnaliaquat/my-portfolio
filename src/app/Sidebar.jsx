@@ -30,6 +30,7 @@ export default function Sidebar() {
     { href: "#home", label: "Home" },
     { href: "#projects", label: "Projects" },
     { href: "#tech-stack", label: "Stack" },
+    { href: "#resume", label: "Resume" },
     { href: "#about", label: "About" },
   ];
 
@@ -67,7 +68,7 @@ export default function Sidebar() {
                 {/* underline */}
                 <span
                   className={`
-      absolute -bottom-0.5 left-4 h-[2px] bg-white rounded-full transition-all duration-300
+      absolute -bottom-0.5 left-4 h-[2px] bg-blue-400 rounded-full transition-all duration-300
       ${isActive ? "w-6 scale-x-100" : "w-6 scale-x-0"}
       origin-left
     `}

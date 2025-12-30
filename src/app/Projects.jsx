@@ -39,7 +39,8 @@ export default function Projects() {
             <div
               key={item.id}
               className="w-full p-6 flex flex-col justify-between gap-4 rounded-2xl 
-                         bg-white/10 backdrop-blur-md border border-white/20 
+                            bg-gradient-to-br from-white/10 to-white/5
+          backdrop-blur-xl border border-white/10 
                          shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Header */}
