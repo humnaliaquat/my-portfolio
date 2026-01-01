@@ -40,13 +40,13 @@ export default function Sidebar() {
         fixed z-30
         left-1/2 bottom-4 -translate-x-1/2
         sm:bottom-6
-        md:left-6 md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:-translate-x-0
+        md:left-6 md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:-translate-x-0 bg-transparent
       "
     >
       <ul
         className="
-          flex flex-row gap-2 rounded-full bg-black/70 px-3 py-2 backdrop-blur-md shadow-lg
-          sm:px-4 sm:py-2
+          flex flex-row gap-2 rounded-full  px-3 py-2 backdrop-blur-md 
+          sm:px-4 sm:py-2 bg-transparent
           md:flex-col md:px-2 md:py-8 md:rounded-2xl md:gap-3
         "
       >

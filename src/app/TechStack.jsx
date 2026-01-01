@@ -30,9 +30,9 @@ export default function TechStack() {
 
   return (
     <section id="tech-stack" className="flex  flex-col">
-      <div className="flex flex-col justify-start w-[600px] px-6 py-4 mx-auto z-20 gap-8 mt-20">
+      <div className="flex flex-col justify-start  w-full sm:w-[600px] px-6 py-4 mx-auto z-20 gap-8 mt-20">
         <h1 className="font-semibold text-2xl text-white">Tech Stack</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-3">
           {tools.map((tool) => {
             const Icon = tool.icon;
             return (
@@ -41,7 +41,8 @@ export default function TechStack() {
                 href={tool.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-3 p-6    bg-gradient-to-br from-white/10 to-white/5
+                className="group flex items-center justify-between gap-3 p-6 w-full
+                  bg-gradient-to-br from-white/10 to-white/5
           backdrop-blur-xl border border-white/10 rounded-xl 
                            shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
               >

@@ -1,62 +1,96 @@
 "use client";
+
 import React from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const details = [
     {
       id: "1",
-      name: "Project 1",
-      para: "If you want, I can write a ready-to-use prompt for an AI tool that guarantees a professional, portfolio-ready headshot for you.",
+      name: "Deskio",
+      para: "An Ecommerce platform to buy desk accessories with seamless user experience.",
       live: "#",
       github: "#",
-      tech: ["React", "Next.js", "Tailwind"],
+      tech: ["React", "Next.js", "Tailwind", "Node.js", "TypeScript"],
     },
     {
       id: "2",
-      name: "Project 2",
-      para: "A sleek modern web application design with interactive components and responsive layout.",
+      name: "PlanOra",
+      para: "A task and project management app to organize and prioritize your daily tasks effectively.",
       live: "#",
       github: "#",
-      tech: ["Node.js", "Express", "MongoDB"],
+      tech: ["Node.js", "Express", "MongoDB", "React", "Tailwind"],
     },
     {
       id: "3",
-      name: "Project 3",
-      para: "An AI-based tool for portfolio-ready image generation with smooth UX and clean design.",
+      name: "Personal Portfolio",
+      para: "A personal portfolio website to showcase my projects, skills, and experience as a developer.",
       live: "#",
       github: "#",
-      tech: ["Python", "Flask", "OpenAI API"],
+      tech: ["Next.js", "React", "Tailwind"],
     },
   ];
 
+  // Motion variants
+  const cardVariant = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  const badgeVariant = {
+    hidden: { opacity: 0, y: 5 },
+    show: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.05, duration: 0.3 },
+    }),
+  };
+
   return (
-    <section id="projects" className="flex min-h-screen flex-col">
-      <div className="flex flex-col justify-start w-[600px] px-6 py-4 mx-auto z-20 gap-8 mt-20">
+    <section id="projects" className="flex min-h-screen flex-col px-4 sm:px-6">
+      <div className="flex flex-col justify-start w-full max-w-[557px] mx-auto py-4 z-20 gap-8 mt-20">
         <h1 className="font-semibold text-2xl text-white">Projects</h1>
         <div className="flex flex-col gap-6">
           {details.map((item) => (
-            <div
+            <motion.div
               key={item.id}
+              variants={cardVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
               className="w-full p-6 flex flex-col justify-between gap-4 rounded-2xl 
-                            bg-gradient-to-br from-white/10 to-white/5
-          backdrop-blur-xl border border-white/10 
-                         shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                bg-gradient-to-br from-white/10 to-white/5
+                backdrop-blur-xl border border-white/10 
+                shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Header */}
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
                 <h2 className="text-white font-bold text-lg hover:text-blue-400 transition-colors duration-200">
                   {item.name}
                 </h2>
                 {item.live && (
-                  <a
+                  <motion.a
                     href={item.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 ml-2"
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 mt-2 sm:mt-0"
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
                   >
-                    <FiExternalLink size={18} title="Live Demo" />
-                  </a>
+                    <div className="relative group">
+                      <FiExternalLink size={18} className="cursor-pointer" />
+                      <span
+                        className="absolute -bottom-10 mb-2 left-1/2 -translate-x-1/2 
+               bg-white/20 text-white text-xs rounded px-2.5 w-20 py-1 
+               opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+                        Live Demo
+                      </span>
+                    </div>
+                  </motion.a>
                 )}
               </div>
 
@@ -66,34 +100,41 @@ export default function Projects() {
               </p>
 
               {/* Footer */}
-              <div className="flex flex-wrap justify-between items-center mt-3 gap-2">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3 gap-2">
                 {/* Tech tags */}
                 <div className="flex flex-wrap gap-3">
-                  {item.tech.map((tech) => (
-                    <span
+                  {item.tech.map((tech, i) => (
+                    <motion.span
                       key={tech}
+                      custom={i}
+                      variants={badgeVariant}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
                       className="bg-white/20 text-gray-200 px-3 py-1 rounded-full text-xs font-medium 
                                   hover:text-white transition-colors duration-200 cursor-default"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
 
                 {/* GitHub button */}
                 {item.github && (
-                  <a
+                  <motion.a
                     href={item.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-gray-400 hover:!text-blue-400 transition-colors duration-200 text-sm font-medium"
+                    className="flex items-center gap-1 text-gray-400 hover:!text-blue-400 transition-colors duration-200 text-sm font-medium mt-2 sm:mt-0"
+                    whileHover={{ x: 4 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <FiGithub size={16} />
                     GitHub
-                  </a>
+                  </motion.a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

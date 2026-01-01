@@ -111,7 +111,7 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mt-6 flex flex-col items-center gap-1"
+            className="mt-6  flex flex-col items-center gap-1"
           >
             <p className="text-gray-400 text-sm italic text-center">
               crafted with <span className="text-red-400">❤️</span> by Hamna
