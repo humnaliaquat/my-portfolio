@@ -203,7 +203,7 @@ export default function Aurora(props) {
   return (
     <div
       ref={ctnDom}
-      className="fixed w-[99.3%] inset-0 z-0 pointer-events-none aurora-container"
+      className="fixed w-full inset-0 z-0 pointer-events-none aurora-container"
     />
   );
 }

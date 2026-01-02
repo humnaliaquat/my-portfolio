@@ -6,9 +6,9 @@ import { Music, Play, Pause, SkipBack, SkipForward, X } from "lucide-react";
 import { motion } from "framer-motion";
 const songs = [
   {
-    title: "End of Beginning",
-    artist: "Djo",
-    src: "/music/endOfBeginning.mp3",
+    title: "The Turning Tide",
+    artist: "Kazoom",
+    src: "/music/the-turning-tide.mp3",
   },
   {
     title: "Reflections",
@@ -87,7 +87,12 @@ export default function FloatingMusic() {
   return (
     <div ref={wrapperRef} className="fixed top-6 right-6 z-50">
       {/* Floating Button */}
-      <div className="relative group">
+      <motion.div
+        className="relative group"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <motion.button
           onClick={() => setOpen((o) => !o)}
           className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer
@@ -108,7 +113,7 @@ export default function FloatingMusic() {
         >
           Now playing
         </span>
-      </div>
+      </motion.div>
 
       {/* Dropdown */}
       {open && (

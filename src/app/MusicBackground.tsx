@@ -7,12 +7,12 @@ export default function MusicBackground() {
 
   return (
     <div
-      className={`fixed inset-0 transition-opacity duration-700 pointer-events-none w-[99.3%] 
+      className={`fixed inset-0 transition-opacity duration-700 pointer-events-none  
         ${playing ? "opacity-100" : "opacity-0"}
       `}
     >
       <div
-        className="fixed top-0 left-0 w-[99.3%] h-40
+        className="fixed top-0 left-0 w-full h-40
   pointer-events-none z-20
   bg-gradient-to-b from-black/70 via-black/40 to-transparent"
       />

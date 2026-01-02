@@ -22,7 +22,7 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
@@ -35,7 +35,8 @@ export default function IntroPage() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-col justify-start items-start w-full max-w-[600px] px-2 sm:px-6 py-1 mx-auto z-20 mt-30 gap-2"
+        className="flex flex-col justify-start items-start w-full max-w-[600px] px-2 sm:px-6 py-4
+         mx-auto z-20 mt-20 gap-2"
       >
         {/* Top Row */}
         <motion.div
@@ -97,12 +98,13 @@ export default function IntroPage() {
           variants={item}
           className="text-sm sm:text-sm text-gray-300 leading-relaxed max-w-full sm:max-w-2xl mt-3"
         >
-          I craft modern, responsive web applications using Next.js, TypeScript,
-          and the MERN stack, with a strong focus on animations, performance,
-          and visual polish. What began as a curiosity for web animations
-          quickly turned into a passion for building clean, well-structured
-          code. I obsess over details from micro-interactions to that one
-          perfect pixel because great user experiences are intentional.
+          I build modern and responsive web applications with Next.js and
+          Typescript and the MERN stack, with a great emphasis on animation and
+          performance, and visual polish. What once started out as a curiosity
+          for web animations quickly evolved into a love for creating
+          well-organized and clean code. I am obsessed with details, right down
+          to micro-interactions, through to that one spot perfect pixel because
+          great user experiences are intentional.
         </motion.p>
 
         {/* Buttons */}
@@ -131,7 +133,7 @@ export default function IntroPage() {
           {/* LinkedIn + GitHub side by side */}
           <div className="flex gap-3 w-full sm:w-[20%] justify-start ">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/hamna-liaquat-9b51a2275/"
               target="_blank"
               className="group flex items-center justify-center px-3 py-2 rounded w-full
               bg-white/5 border border-white/20
@@ -142,7 +144,7 @@ export default function IntroPage() {
             </a>
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/humnaliaquat"
               target="_blank"
               className="group flex items-center justify-center px-3 py-2 rounded w-full
               bg-white/5 border border-white/20

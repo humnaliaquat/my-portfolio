@@ -11,15 +11,15 @@ export default function Projects() {
       name: "Deskio",
       para: "An Ecommerce platform to buy desk accessories with seamless user experience.",
       live: "#",
-      github: "#",
+      github: "https://github.com/humnaliaquat/desk-setup-store",
       tech: ["React", "Next.js", "Tailwind", "Node.js", "TypeScript"],
     },
     {
       id: "2",
       name: "PlanOra",
       para: "A task and project management app to organize and prioritize your daily tasks effectively.",
-      live: "#",
-      github: "#",
+      live: "https://task-project-manager-nu.vercel.app/",
+      github: "https://github.com/humnaliaquat/task-project-manager",
       tech: ["Node.js", "Express", "MongoDB", "React", "Tailwind"],
     },
     {
@@ -27,14 +27,14 @@ export default function Projects() {
       name: "Personal Portfolio",
       para: "A personal portfolio website to showcase my projects, skills, and experience as a developer.",
       live: "#",
-      github: "#",
+      github: "https://github.com/humnaliaquat/my-portfolio",
       tech: ["Next.js", "React", "Tailwind"],
     },
   ];
 
   // Motion variants
   const cardVariant = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
@@ -50,7 +50,15 @@ export default function Projects() {
   return (
     <section id="projects" className="flex min-h-screen flex-col px-4 sm:px-6">
       <div className="flex flex-col justify-start w-full max-w-[557px] mx-auto py-4 z-20 gap-8 mt-20">
-        <h1 className="font-semibold text-2xl text-white">Projects</h1>
+        <motion.h1
+          className="font-semibold text-2xl text-gray-400"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.3 }}
+        >
+          Projects
+        </motion.h1>
         <div className="flex flex-col gap-6">
           {details.map((item) => (
             <motion.div
@@ -59,8 +67,7 @@ export default function Projects() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ y: -6 }}
               className="w-full p-6 flex flex-col justify-between gap-4 rounded-2xl 
                 bg-gradient-to-br from-white/10 to-white/5
                 backdrop-blur-xl border border-white/10 
@@ -68,7 +75,7 @@ export default function Projects() {
             >
               {/* Header */}
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-                <h2 className="text-white font-bold text-lg hover:text-blue-400 transition-colors duration-200">
+                <h2 className="text-white  text-lg hover:text-blue-400 transition-colors duration-200">
                   {item.name}
                 </h2>
                 {item.live && (
@@ -83,8 +90,8 @@ export default function Projects() {
                     <div className="relative group">
                       <FiExternalLink size={18} className="cursor-pointer" />
                       <span
-                        className="absolute -bottom-10 mb-2 left-1/2 -translate-x-1/2 
-               bg-white/20 text-white text-xs rounded px-2.5 w-20 py-1 
+                        className="absolute bottom-3 mb-2 left-1/2 -translate-x-1/2  z-40
+               bg-white/20 text-white text-xs items-center flex justify-center rounded px-2 w-20 py-1 
                opacity-0 group-hover:opacity-100 transition-opacity"
                       >
                         Live Demo

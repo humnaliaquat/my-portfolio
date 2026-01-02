@@ -1,10 +1,18 @@
+"use client";
 import React from "react";
 import { Download, FileText } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ResumeSection() {
   return (
-    <section id="resume" className="flex flex-col">
-      <div className="flex flex-col justify-start w-[600px] px-6 py-4 mx-auto z-20 gap-8 mt-20">
+    <section id="resume" className="flex flex-col px-4 sm:px-6">
+      <motion.div
+        className="flex flex-col justify-start  w-full max-w-[557px]  py-4 mx-auto z-20 gap-8 mt-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", margin: "-20px" }}
+        viewport={{ once: true }}
+      >
         {/* Section Title */}
         <h1 className="font-semibold text-2xl text-gray-200">Resume</h1>
 
@@ -16,34 +24,60 @@ export default function ResumeSection() {
           shadow-lg hover:shadow-2xl transition-all duration-300"
         >
           {/* Top Row */}
-          <div className="flex items-center justify-between">
+          <motion.div
+            className="flex items-center justify-between"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <span className="text-sm text-gray-300 font-medium">
               Hamna Liaquat
             </span>
             <span className="text-xs text-gray-400">PDF · Updated 2025</span>
-          </div>
+          </motion.div>
 
           {/* Divider */}
           <div className="w-full h-px bg-white/10 my-4" />
 
           {/* Snapshot Grid */}
           <div className="grid grid-cols-2 gap-y-3 text-sm text-gray-300">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <span className="text-gray-400">Role</span>
               <p>Full-Stack Developer</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <span className="text-gray-400">Stack</span>
               <p>MERN · Next.js</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <span className="text-gray-400">Focus</span>
               <p>Frontend, UI/UX</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <span className="text-gray-400">Availability</span>
               <p>Open to Internships</p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Divider */}
@@ -51,7 +85,7 @@ export default function ResumeSection() {
 
           {/* CTA */}
           <div className="flex justify-end">
-            <a
+            <motion.a
               href="/Hamna_Liaquat_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -60,13 +94,17 @@ export default function ResumeSection() {
               bg-white/10 text-gray-200 border border-white/20
               hover:bg-blue-500/20 hover:border-blue-400
               transition-all duration-300"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
               <FileText size={16} />
               View Resume
-            </a>
+            </motion.a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

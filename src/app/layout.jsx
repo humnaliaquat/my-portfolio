@@ -1,4 +1,3 @@
-import FloatingMusic from "./FloatingMusic";
 import "./globals.css";
 import MusicBackground from "./MusicBackground";
 import Sidebar from "./Sidebar";
@@ -10,6 +9,7 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
 export const metadata = {
   title: "Hamna Liaquat",
   description: "Full-Stack Developer | Creative Coder",
@@ -18,25 +18,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-black antialiased`}>
+      <body
+        className={`${inter.className} min-h-screen bg-black antialiased relative`}
+      >
+        {/* Sidebar */}
         <Sidebar />
-        <div className="flex h-screen overflow-hidden">
-          {/* Main Content Area */}
-          <main className="flex-1 overflow-y-auto ">
-            <div className="mx-auto max-w-5xl px-6  ">
-              {children}
-              <MusicBackground />
-              <div className="fixed top-6 right-6 z-50 hidden md:block">
-                <FloatingMusic />
-              </div>
-            </div>
-            <div
-              className="fixed bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-15
-  pointer-events-none z-20
-  bg-gradient-to-t from-black/70 via-black/40 to-transparent"
-            />
-          </main>
-        </div>
+
+        {/* Background Music + Aurora */}
+        <MusicBackground />
+
+        {/* Scrollable Main Content */}
+        <main className="relative z-10 flex-1 overflow-y-auto">
+          <div className="mx-auto max-w-5xl px-6 ">{children}</div>
+        </main>
+
+        {/* Bottom Gradient */}
+        <div
+          className="fixed bottom-0 left-0 w-full h-40 pointer-events-none z-20
+                        bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+        />
       </body>
     </html>
   );

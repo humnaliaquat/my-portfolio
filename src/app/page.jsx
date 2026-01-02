@@ -6,53 +6,34 @@ import IntroPage from "./IntroPage";
 import Projects from "./Projects";
 import ResumeSection from "./ResumeSection";
 import TechStack from "./TechStack";
-import Loader from "../components/Loader";
+
 import FloatingMusic from "./FloatingMusic";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-  const mainRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className="min-h-screen w-full bg-black relative">
-      {/* Loader overlay */}
-      {loading && (
-        <div className="fixed inset-0 z-50">
-          <Loader />
-        </div>
-      )}
-
-      {/* Floating Music */}
-      <div className="fixed top-6 right-6 z-50 hidden md:block">
-        <FloatingMusic />
-      </div>
-
+    <div className="min-h-screen w-full  relative">
       {/* Main content (Sidebar will mount, IntersectionObserver works) */}
-      <div className="relative z-10 mb-20 ">
+
+      <div className="relative z-10 mb-30 ">
+        {/* Floating Music */}
+
         <IntroPage />
+
         <section id="projects">
           <Projects />
         </section>
-        <section
-          id="tech-stack"
-          className="flex flex-col items-center justify-center"
-        >
+        <section id="tech-stack" className="flex flex-col ">
           <TechStack />
         </section>
-        <section
-          id="resume"
-          className="flex flex-col items-center justify-center"
-        >
+        <section id="resume" className="flex flex-col ">
           <ResumeSection />
         </section>
         <section id="about">
           <AboutSection />
         </section>
+        <div className="fixed top-6 right-6 z-50 hidden md:block">
+          <FloatingMusic />
+        </div>
       </div>
     </div>
   );
