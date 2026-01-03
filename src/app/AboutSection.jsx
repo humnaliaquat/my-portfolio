@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import ScrollFloat from "../components/ScrollFloat";
+
 import Link from "next/link";
 
 export default function AboutSection() {
