@@ -80,7 +80,8 @@ export default function IntroPage() {
         {/* Typing role */}
         <motion.div variants={item} className="w-full">
           <TextType
-            className="text-sm  text-blue-300"
+            className="text-sm  !text-blue-400/90
+"
             text={[
               "Software Engineer",
               "MERN Developer",

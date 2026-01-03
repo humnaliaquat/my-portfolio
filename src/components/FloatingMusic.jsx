@@ -124,7 +124,7 @@ export default function FloatingMusic() {
                 <p className="text-sm text-white font-medium">
                   {songs[currentSong].title}
                 </p>
-                <p className="text-[11px] font-thin text-gray-400">
+                <p className="text-[11px] tracking-wider font-thin !text-gray-400">
                   {songs[currentSong].artist}
                 </p>
               </div>
