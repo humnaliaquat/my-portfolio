@@ -167,7 +167,7 @@ export default function AboutSection() {
               Skills
             </motion.h2>
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"

@@ -25,7 +25,7 @@ export default function ResumeSection() {
         >
           {/* Top Row */}
           <motion.div
-            className="flex items-center justify-between"
+            className="flex  items-start justify-start sm:flex-row flex-col gap-2 sm:justify-between sm:items-center"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -34,14 +34,14 @@ export default function ResumeSection() {
             <span className="text-sm text-gray-300 font-medium">
               Hamna Liaquat
             </span>
-            <span className="text-xs text-gray-400">PDF · Updated 2025</span>
+            <span className="text-xs text-gray-400">PDF · Updated 2026</span>
           </motion.div>
 
           {/* Divider */}
           <div className="w-full h-px bg-white/10 my-4" />
 
           {/* Snapshot Grid */}
-          <div className="grid grid-cols-2 gap-y-3 text-sm text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-sm text-gray-300">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,23 +84,27 @@ export default function ResumeSection() {
           <div className="w-full h-px bg-white/10 my-5" />
 
           {/* CTA */}
-          <div className="flex justify-end">
+          <div className="flex justify-center sm:justify-end">
             <motion.a
-              href="/Hamna_Liaquat_Resume.pdf"
-              target="_blank"
+              href="#"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2
-              px-4 py-2 rounded-md
-              bg-white/10 text-gray-200 border border-white/20
-              hover:bg-blue-500/20 hover:border-blue-400
-              transition-all duration-300"
+              className="
+    inline-flex items-center justify-center gap-2
+    px-3 py-2 sm:px-4 sm:py-2.5
+    text-sm sm:text-base
+    rounded-md
+    bg-white/10 text-gray-200 border border-white/20
+    hover:bg-blue-500/20 hover:border-blue-400
+    transition-all duration-300
+    w-full sm:w-auto
+  "
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <FileText size={16} />
-              View Resume
+              <FileText size={16} className="sm:w-[18px] sm:h-[18px]" />
+              <span className="whitespace-nowrap">View Resume</span>
             </motion.a>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function IntroPage() {
           </motion.div>
 
           {/* Availability */}
-          <div className="flex items-center gap-3 px-3 py-1 text-xs sm:text-sm text-gray-300 rounded-full font-medium">
+          <div className="flex items-center gap-3 sm:px-3 py-1 px-0 text-xs sm:text-sm text-gray-300 rounded-full font-medium">
             <span className="relative flex h-3 w-3">
               <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-40 animate-ping" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
