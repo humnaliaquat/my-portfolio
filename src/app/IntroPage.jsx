@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-import TextType from "./TextType";
+import TextType from "../components/TextType";
 
 const songs = [
   { title: "Night Drive", artist: "Vibes", id: "5E30LdtzQTGqRvNd7l6kG5" },
@@ -114,7 +114,8 @@ export default function IntroPage() {
         >
           {/* Email */}
           <a
-            href="mailto:your@email.com"
+            href="https://mail.google.com/mail/?view=cm&to=hamnaliaqat24@gmail.com"
+            target="_blank"
             className="group relative flex items-center justify-between px-6 py-2 rounded w-full sm:w-[80%]
             bg-white/5 text-gray-200 backdrop-blur-2xl border border-white/20
             transition-all duration-200 hover:-translate-y-1

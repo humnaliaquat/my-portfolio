@@ -1,7 +1,7 @@
 import GoToTop from "../components/GoToTop";
 import "./globals.css";
-import MusicBackground from "./MusicBackground";
-import Sidebar from "./Sidebar";
+import MusicBackground from "../components/MusicBackground";
+import Sidebar from "../components/Sidebar";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -10,10 +10,11 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-
+// Metadata
 export const metadata = {
   title: "Hamna Liaquat",
   description: "Full-Stack Developer | Creative Coder",
+  icon: "/logo.ico",
 };
 
 export default function RootLayout({ children }) {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
 
         {/* Background Music + Aurora */}
         <MusicBackground />
+        {/* Go to top btn */}
         <GoToTop />
 
         {/* Scrollable Main Content */}

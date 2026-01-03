@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { useMusicStore } from "./stores/musicStore";
+import { useMusicStore } from "../app/stores/musicStore";
 import { Music, Play, Pause, SkipBack, SkipForward, X } from "lucide-react";
 import { motion } from "framer-motion";
 const songs = [
