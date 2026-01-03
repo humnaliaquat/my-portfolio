@@ -49,7 +49,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="flex min-h-screen flex-col px-4 sm:px-6">
-      <div className="flex flex-col justify-start w-full max-w-[557px] mx-auto py-4 z-20 gap-8 mt-20">
+      <div className="flex flex-col justify-start w-full max-w-[557px] mx-auto py-4 z-30 gap-8 mt-20">
         <motion.h1
           className="font-semibold text-2xl text-gray-400"
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export default function Projects() {
               whileHover={{ y: -6 }}
               className="w-full p-6 flex flex-col justify-between gap-4 rounded-2xl 
                 bg-gradient-to-br from-white/10 to-white/5
-                backdrop-blur-xl border border-white/10 
+                backdrop-blur-2xl border border-white/10 
                 shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Header */}

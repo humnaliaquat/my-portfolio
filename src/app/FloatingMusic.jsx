@@ -6,27 +6,23 @@ import { Music, Play, Pause, SkipBack, SkipForward, X } from "lucide-react";
 import { motion } from "framer-motion";
 const songs = [
   {
-    title: "The Turning Tide",
-    artist: "Kazoom",
-    src: "/music/the-turning-tide.mp3",
+    title: "Birds of the Feather",
+    artist: "Billie Eilish",
+    src: "/music/birdsOfFeather.mp3",
+  },
+
+  {
+    title: "Guitar Melody",
+    artist: "Healing Guitar",
+    src: "/music/guitarMelody.mp3",
   },
   {
-    title: "Reflections",
-    artist: "The Neighborhood",
-    src: "/music/reflections.mp3",
+    title: "Arcade (Guitar Cover)",
+    artist: "Bod G",
+    src: "/music/Arcade.mp3",
   },
   {
-    title: "Pray for Me",
-    artist: "The Weeknd",
-    src: "/music/prayForMe.mp3",
-  },
-  {
-    title: "Wo Noor",
-    artist: "Ap Dhillon",
-    src: "/music/woNoor.mp3",
-  },
-  {
-    title: "Still With You",
+    title: "Still With You ",
     artist: "JK",
     src: "/music/stillWithYou.mp3",
   },
@@ -95,9 +91,9 @@ export default function FloatingMusic() {
       >
         <motion.button
           onClick={() => setOpen((o) => !o)}
-          className="flex items-center justify-center w-10 h-10 rounded-full cursor-pointer
-    border text-gray-300 backdrop-blur bg-black/40
-    border-white/20
+          className="flex items-center justify-center w-9 h-9 rounded-full cursor-pointer 
+    border text-gray-300 backdrop-blur 
+    border-transparent 
     hover:scale-110 hover:bg-blue-500/20 hover:border-blue-400
     transition"
         >

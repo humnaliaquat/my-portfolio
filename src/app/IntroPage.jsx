@@ -98,7 +98,7 @@ export default function IntroPage() {
           variants={item}
           className="text-sm sm:text-sm text-gray-300 leading-relaxed max-w-full sm:max-w-2xl mt-3"
         >
-          I build modern and responsive web applications with Next.js and
+          I build modern and responsive web applications with Next.js,
           Typescript and the MERN stack, with a great emphasis on animation and
           performance, and visual polish. What once started out as a curiosity
           for web animations quickly evolved into a love for creating
@@ -116,7 +116,7 @@ export default function IntroPage() {
           <a
             href="mailto:your@email.com"
             className="group relative flex items-center justify-between px-6 py-2 rounded w-full sm:w-[80%]
-            bg-white/5 text-gray-200 border border-white/20
+            bg-white/5 text-gray-200 backdrop-blur-2xl border border-white/20
             transition-all duration-200 hover:-translate-y-1
             hover:bg-blue-500/20 hover:border-blue-400"
           >
@@ -135,7 +135,7 @@ export default function IntroPage() {
             <a
               href="https://www.linkedin.com/in/hamna-liaquat-9b51a2275/"
               target="_blank"
-              className="group flex items-center justify-center px-3 py-2 rounded w-full
+              className="group flex items-center justify-center px-3 py-2 rounded w-full backdrop-blur-2xl
               bg-white/5 border border-white/20
               transition-all duration-200 hover:-translate-y-0.5
               hover:bg-blue-500/20 hover:border-blue-400"
@@ -146,7 +146,7 @@ export default function IntroPage() {
             <a
               href="https://github.com/humnaliaquat"
               target="_blank"
-              className="group flex items-center justify-center px-3 py-2 rounded w-full
+              className="group flex items-center justify-center px-3 py-2 rounded w-full backdrop-blur-2xl
               bg-white/5 border border-white/20
               transition-all duration-200 hover:-translate-y-0.5
               hover:bg-blue-500/20 hover:border-blue-400"

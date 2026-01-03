@@ -1,3 +1,4 @@
+import GoToTop from "../components/GoToTop";
 import "./globals.css";
 import MusicBackground from "./MusicBackground";
 import Sidebar from "./Sidebar";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
 
         {/* Background Music + Aurora */}
         <MusicBackground />
+        <GoToTop />
 
         {/* Scrollable Main Content */}
         <main className="relative z-10 flex-1 overflow-y-auto">
