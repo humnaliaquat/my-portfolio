@@ -14,7 +14,6 @@ const inter = Inter({
 export const metadata = {
   title: "Hamna Liaquat",
   description: "Full-Stack Developer | Creative Coder",
-  icon: "/logo.ico",
 };
 
 export default function RootLayout({ children }) {

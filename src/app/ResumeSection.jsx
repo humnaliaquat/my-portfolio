@@ -7,7 +7,7 @@ export default function ResumeSection() {
   return (
     <section id="resume" className="flex flex-col px-4 sm:px-6">
       <motion.div
-        className="flex flex-col justify-start  w-full max-w-[557px]  py-4 mx-auto z-20 gap-8 mt-20"
+        className="flex flex-col justify-start  w-full max-w-[557px]  py-4 mx-auto z-20 gap-8 mt-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", margin: "-20px" }}

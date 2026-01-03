@@ -53,7 +53,7 @@ export default function TechStack() {
 
   return (
     <section id="tech-stack" className="flex  flex-col px-4 sm:px-6">
-      <div className="flex flex-col justify-start  w-full max-w-[557px]  py-4 mx-auto z-20 gap-8 mt-20">
+      <div className="flex flex-col justify-start  w-full max-w-[557px]  py-4 mx-auto z-20 gap-8 mt-16">
         <motion.h1
           className="font-semibold text-2xl text-white"
           variants={itemVariants}
