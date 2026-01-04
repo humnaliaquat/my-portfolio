@@ -206,7 +206,7 @@ export default function AboutSection() {
                   title={skill.desc}
                 >
                   <p className="font-semibold">{skill.title}</p>
-                  <p className="text-xs !text-gray-400 mt-1 line-clamp-2">
+                  <p className="text-sm !text-gray-400 mt-1 line-clamp-2">
                     {skill.desc}
                   </p>
                 </motion.div>
