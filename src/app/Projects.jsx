@@ -76,7 +76,7 @@ export default function Projects() {
               className="w-full rounded-lg overflow-hidden
 bg-gradient-to-br from-white/12 to-white/5
 backdrop-blur-xl border border-white/20
-p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)]
+p-2 
 
 transition-all duration-300"
             >
