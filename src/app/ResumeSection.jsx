@@ -14,7 +14,14 @@ export default function ResumeSection() {
         viewport={{ once: true }}
       >
         {/* Section Title */}
-        <h1 className="font-semibold text-2xl text-gray-200">Resume</h1>
+        <motion.h1
+          className="font-semibold text-2xl text-gray-200"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Resume
+        </motion.h1>
 
         {/* Glass Card */}
         <div

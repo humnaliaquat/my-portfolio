@@ -41,7 +41,10 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="flex flex-col w-full px-4 sm:px-6 ">
+    <section
+      id="about"
+      className="flex flex-col w-full px-4 sm:px-6 overflow-y-hidden"
+    >
       <div className="flex flex-col justify-start w-full max-w-[590px] mx-auto py-4 gap-8 mt-16">
         {/* Title */}{" "}
         <motion.h1
@@ -70,7 +73,7 @@ export default function AboutSection() {
             viewport={{ once: true, margin: "-20px" }}
             variants={{
               hidden: {},
-              visible: { transition: { staggerChildren: 0.3 } },
+              visible: { transition: { staggerChildren: 0.2 } },
             }}
           >
             <motion.div
@@ -115,9 +118,7 @@ export default function AboutSection() {
               </span>{" "}
               . In my free time, I am a music appreciator and enjoy sketching
               cute doodles and reading books.
-            </motion.p>{" "}
-            <p className="mt-4 text-sm !text-gray-300 ">
-              Always happy to{" "}
+              <br /> Always happy to{" "}
               <Link
                 href={"https://www.linkedin.com/in/hamna-liaquat-9b51a2275/"}
                 target="blank"
@@ -128,25 +129,25 @@ export default function AboutSection() {
               </Link>{" "}
               with fellow developers and creatives. Reach out for projects or
               tech chats.{" "}
-            </p>
+            </motion.p>{" "}
           </motion.div>
         </motion.div>
         {/* Education */}
-        <section>
+        <div>
           <motion.h2
             className="text-xl  font-semibold !text-gray-200 mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Education
+            Education:
           </motion.h2>
 
-          <div className="flex flex-col gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
             {[
               {
                 title: "BS in Computer Science",
-                school: "Virtual University",
+                school: "Virtual University of Pakistan",
                 date: "2021 — Present",
               },
               {
@@ -157,21 +158,62 @@ export default function AboutSection() {
             ].map((edu, idx) => (
               <motion.div
                 key={idx}
-                className="flex justify-between items-center even:border-none border-b border-white/20 pb-5 !text-gray-300"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-lg
+        bg-gradient-to-br from-white/6 to-white/2 backdrop-blur-xl border border-white/20
+        transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 w-full sm:w-auto">
                   <p className="!text-gray-200 font-medium">{edu.title}</p>
                   <p className="!text-gray-400 text-sm italic">{edu.school}</p>
                 </div>
-                <p className="!text-gray-400 text-sm">{edu.date}</p>
+                <p className="!text-gray-400 text-sm mt-2 sm:mt-0">
+                  {edu.date}
+                </p>
               </motion.div>
             ))}
           </div>
-        </section>
+
+          {/* Skills */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="text-xl font-semibold !text-gray-200 mb-4 mt-10"
+              variants={itemVariants}
+            >
+              Skills:
+            </motion.h2>
+
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              {skills.map((skill, idx) => (
+                <motion.div
+                  key={idx}
+                  variants={{ itemVariants }}
+                  className=" bg-gradient-to-br from-white/6 to-white/2
+          backdrop-blur-xl  border border-white/20 rounded-lg px-4 py-3 !text-gray-200 text-sm font-medium transition-all duration-300 cursor-default"
+                  title={skill.desc}
+                >
+                  <p className="font-semibold">{skill.title}</p>
+                  <p className="text-xs !text-gray-400 mt-1 line-clamp-2">
+                    {skill.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

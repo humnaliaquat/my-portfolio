@@ -12,7 +12,7 @@ const corinthia = Corinthia({
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col px-6 sm:px-12 py-4  relative z-20 mb-40">
+    <footer className="flex flex-col px-6 sm:px-12 py-4 mt-6 relative z-20 mb-40">
       <div className="flex flex-col justify-start w-full max-w-[560px] mx-auto gap-10">
         {/* Social Icons */}
         <motion.div
