@@ -92,7 +92,7 @@ export default function FloatingMusic() {
         <motion.button
           onClick={() => setOpen((o) => !o)}
           className="flex items-center justify-center w-9 h-9 rounded-full cursor-pointer 
-    border text-gray-300 backdrop-blur 
+    border !text-gray-300 backdrop-blur 
     border-transparent 
     hover:scale-110 hover:bg-blue-500/20 hover:border-blue-400
     transition"
@@ -103,7 +103,7 @@ export default function FloatingMusic() {
         {/* Tooltip */}
         <span
           className="absolute right-12 top-1/2 -translate-y-1/2
-    whitespace-nowrap text-xs text-gray-300
+    whitespace-nowrap text-xs !text-gray-300
     opacity-0 group-hover:opacity-100
     transition-opacity duration-300 pointer-events-none"
         >
@@ -129,12 +129,12 @@ export default function FloatingMusic() {
                 </p>
               </div>
               <button onClick={() => setOpen(false)}>
-                <X size={16} className="text-gray-400 cursor-pointer" />
+                <X size={16} className="!text-gray-400 cursor-pointer" />
               </button>
             </div>
 
             {/* Controls */}
-            <div className="flex items-center justify-center gap-6  text-gray-300">
+            <div className="flex items-center justify-center gap-6  !text-gray-300">
               <button onClick={prev} className="cursor-pointer">
                 <SkipBack size={18} />
               </button>
