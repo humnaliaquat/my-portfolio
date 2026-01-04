@@ -77,7 +77,7 @@ export default function GoToTop() {
                   transition={{ duration: 0.2 }}
                   className="
                     absolute -top-9 left-1/2 -translate-x-1/2
-                    bg-black/70 backdrop-blur
+                    bg-white/10 backdrop-blur
                     text-white text-xs
                     rounded-md px-2 py-1
                     whitespace-nowrap
