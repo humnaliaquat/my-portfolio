@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen w-full  relative">
       {/* Main content  */}
 
-      <div className="relative z-10 mb-30 ">
+      <div className="relative z-10  ">
         {/* intro section */}
         <IntroPage />
         {/* projects section */}

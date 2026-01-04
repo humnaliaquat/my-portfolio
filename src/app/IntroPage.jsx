@@ -30,12 +30,15 @@ export default function IntroPage() {
   const [currentSong] = useState(songs[0].id);
 
   return (
-    <section className="flex  flex-col text-gray-400 px-4 sm:px-6" id="home">
+    <section
+      className="flex  flex-col text-gray-400 py-4 px-4 sm:px-6"
+      id="home"
+    >
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-col justify-start items-start w-full max-w-[600px] px-2 sm:px-6 py-4
+        className="flex flex-col justify-start items-start w-full max-w-[590px]  
          mx-auto z-20 mt-20 gap-2"
       >
         {/* Top Row */}
@@ -60,7 +63,7 @@ export default function IntroPage() {
           </motion.div>
 
           {/* Availability */}
-          <div className="flex items-center gap-3 sm:px-3 py-1 px-0 text-xs sm:text-sm text-gray-300 rounded-full font-medium">
+          <div className="flex items-center gap-3 sm:px-3 py-1 px-0 text-xs sm:text-sm !text-gray-300 rounded-full font-medium">
             <span className="relative flex h-3 w-3">
               <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-40 animate-ping" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
@@ -82,11 +85,7 @@ export default function IntroPage() {
           <TextType
             className="text-sm  !text-blue-400/90
 "
-            text={[
-              "Software Engineer",
-              "MERN Developer",
-              "BSCS Final Year Student",
-            ]}
+            text={["Software Engineer", "MERN Developer", "Frontend Developer"]}
             typingSpeed={80}
             pauseDuration={1500}
             showCursor
@@ -97,7 +96,7 @@ export default function IntroPage() {
         {/* Intro paragraph */}
         <motion.p
           variants={item}
-          className="text-sm sm:text-sm text-gray-300 leading-relaxed max-w-full sm:max-w-2xl mt-3"
+          className="text-sm sm:text-sm !text-gray-300 leading-relaxed max-w-full sm:max-w-2xl mt-3"
         >
           I build modern and responsive web applications with Next.js,
           Typescript and the MERN stack, with a great emphasis on animation and
@@ -117,12 +116,12 @@ export default function IntroPage() {
           <a
             href="https://mail.google.com/mail/?view=cm&to=hamnaliaqat24@gmail.com"
             target="_blank"
-            className="group relative flex items-center justify-between px-6 py-2 rounded w-full sm:w-[80%]
-            bg-white/5 text-gray-200 backdrop-blur-2xl border border-white/20
+            className="group relative flex items-center justify-between px-6 py-2 rounded-lg w-full sm:w-[80%]
+            bg-white/5 !text-gray-200 backdrop-blur-2xl border border-white/20
             transition-all duration-200 hover:-translate-y-1
             hover:bg-blue-500/20 hover:border-blue-400"
           >
-            <span className="flex items-center gap-2 text-gray-300 group-hover:text-blue-400">
+            <span className="flex items-center gap-2 !text-gray-300 group-hover:!text-white">
               <FaEnvelope size={20} />
               Email Me
             </span>
@@ -137,7 +136,7 @@ export default function IntroPage() {
             <a
               href="https://www.linkedin.com/in/hamna-liaquat-9b51a2275/"
               target="_blank"
-              className="group flex items-center justify-center px-3 py-2 rounded w-full backdrop-blur-2xl
+              className="group flex items-center justify-center px-3 py-2 rounded-lg w-full backdrop-blur-2xl
               bg-white/5 border border-white/20
               transition-all duration-200 hover:-translate-y-0.5
               hover:bg-blue-500/20 hover:border-blue-400"
@@ -148,7 +147,7 @@ export default function IntroPage() {
             <a
               href="https://github.com/humnaliaquat"
               target="_blank"
-              className="group flex items-center justify-center px-3 py-2 rounded w-full backdrop-blur-2xl
+              className="group flex items-center justify-center px-3 py-2 rounded-lg w-full backdrop-blur-2xl
               bg-white/5 border border-white/20
               transition-all duration-200 hover:-translate-y-0.5
               hover:bg-blue-500/20 hover:border-blue-400"

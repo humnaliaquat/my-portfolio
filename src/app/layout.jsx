@@ -3,6 +3,7 @@ import "./globals.css";
 import MusicBackground from "../components/MusicBackground";
 import Sidebar from "../components/Sidebar";
 import { Inter } from "next/font/google";
+import Footer from "../components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen bg-black antialiased relative`}
+        className={`${inter.className} min-h-screen bg-[#0F0F0F] antialiased relative flex flex-col  `}
       >
         {/* Sidebar */}
         <Sidebar />
@@ -31,15 +32,15 @@ export default function RootLayout({ children }) {
         <GoToTop />
 
         {/* Scrollable Main Content */}
-        <main className="relative z-10 flex-1 overflow-y-auto">
-          <div className="mx-auto max-w-5xl px-6 ">{children}</div>
+        <main className="relative z-10 flex-1 overflow-y-auto overflow-x-hidden ">
+          <div className="mx-auto max-w-5xl px-6 ">
+            {children}
+            {/* footer */}
+          </div>
         </main>
-
+        <Footer />
         {/* Bottom Gradient */}
-        <div
-          className="fixed bottom-0 left-0 w-full h-40 pointer-events-none z-20
-                        bg-gradient-to-t from-black/70 via-black/40 to-transparent"
-        />
+        <div className="pointer-events-none fixed bottom-0 left-0 h-32 w-full bg-gradient-to-t from-[#0F0F0F] to-transparent z-10 drop-shadow-2xl  " />
       </body>
     </html>
   );

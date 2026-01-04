@@ -6,11 +6,8 @@
   scrollbar-width: thin;
 }
 html { scroll-behavior: smooth;
-background-color: black; }
+ }
 
-body{
-  background-color: black;
-}
 .aurora-container {
   width: 100%;
   height: 100%;
@@ -18,6 +15,8 @@ body{
 .scroll-float {
   overflow: hidden;
 }
+
+
 
 .scroll-float-text {
   display: inline-block;

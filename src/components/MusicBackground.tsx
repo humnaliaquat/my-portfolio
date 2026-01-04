@@ -14,7 +14,7 @@ export default function MusicBackground() {
       <div
         className="fixed top-0 left-0 w-full h-40
   pointer-events-none z-20
-  bg-gradient-to-b from-black/70 via-black/40 to-transparent"
+  bg-gradient-to-b from-[#0F0F0F]/70 via-[#0F0F0F]/40 to-transparent"
       />
       <Aurora
         colorStops={["#2954ff", "#7cff67", "#2954ff"]}

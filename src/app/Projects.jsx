@@ -49,9 +49,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className="flex min-h-screen flex-col px-4 sm:px-6">
-      <div className="flex flex-col justify-start w-full max-w-[557px] mx-auto py-4 z-30 gap-8 mt-16">
+      <div className="flex flex-col justify-start w-full max-w-[590px] mx-auto py-4 z-30 gap-8 mt-16">
         <motion.h1
-          className="font-semibold text-2xl text-gray-400"
+          className="font-semibold text-2xl !text-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -68,8 +68,8 @@ export default function Projects() {
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -6 }}
-              className="w-full p-6 flex flex-col justify-between gap-4 rounded-2xl 
-                bg-gradient-to-br from-white/10 to-white/5
+              className="w-full p-6 flex flex-col justify-between gap-4 rounded-lg
+                bg-gradient-to-br from-white/8 to-white/2
                 backdrop-blur-2xl border border-white/10 
                 shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
@@ -83,7 +83,7 @@ export default function Projects() {
                     href={item.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-200 mt-2 sm:mt-0"
+                    className="text-gray-400 hover:!text-blue-400 transition-colors duration-200 mt-2 sm:mt-0"
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -91,7 +91,7 @@ export default function Projects() {
                       <FiExternalLink size={18} className="cursor-pointer" />
                       <span
                         className="absolute bottom-3 mb-2 left-1/2 -translate-x-1/2  z-40
-               bg-white/20 text-white text-xs items-center flex justify-center rounded px-2 w-20 py-1 
+               bg-white/10 text-white text-xs items-center flex justify-center rounded px-2 w-20 py-1 
                opacity-0 group-hover:opacity-100 transition-opacity"
                       >
                         Live Demo
@@ -102,7 +102,7 @@ export default function Projects() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="!text-gray-300 text-sm leading-relaxed">
                 {item.para}
               </p>
 
@@ -118,7 +118,7 @@ export default function Projects() {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true }}
-                      className="bg-white/20 text-gray-200 px-3 py-1 rounded-full text-xs font-medium 
+                      className="bg-white/10 !text-gray-200 px-3 py-1 rounded-full text-xs font-medium 
                                   hover:text-white transition-colors duration-200 cursor-default"
                     >
                       {tech}
