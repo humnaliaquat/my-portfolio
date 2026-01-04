@@ -205,7 +205,7 @@ export default function AboutSection() {
           backdrop-blur-xl  border border-white/20 rounded-lg px-4 py-3 !text-gray-200 text-sm font-medium transition-all duration-300 cursor-default"
                   title={skill.desc}
                 >
-                  <p className="font-semibold">{skill.title}</p>
+                  <p className="font-semibold !text-gray-200">{skill.title}</p>
                   <p className="text-sm !text-gray-400 mt-1 line-clamp-2">
                     {skill.desc}
                   </p>
