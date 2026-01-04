@@ -121,7 +121,7 @@ export default function FloatingMusic() {
             {/* Header */}
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm text-white font-medium">
+                <p className="text-sm !text-gray-200 font-medium">
                   {songs[currentSong].title}
                 </p>
                 <p className="text-[11px] tracking-wider font-thin !text-gray-400">

@@ -75,7 +75,7 @@ export default function IntroPage() {
         {/* Name */}
         <motion.h3
           variants={item}
-          className="text-xl sm:text-2xl font-bold text-gray-300 inline-flex items-center gap-3 mt-2"
+          className="text-xl sm:text-2xl font-bold !text-gray-200 inline-flex items-center gap-3 mt-2"
         >
           Hey, Hamna here
         </motion.h3>

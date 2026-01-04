@@ -15,7 +15,7 @@ export default function ResumeSection() {
       >
         {/* Section Title */}
         <motion.h1
-          className="font-semibold text-2xl text-gray-200"
+          className="font-semibold text-2xl !text-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -38,24 +38,24 @@ export default function ResumeSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <span className="text-sm text-gray-300 font-medium">
+            <span className="text-sm !text-gray-300 font-medium">
               Hamna Liaquat
             </span>
-            <span className="text-xs text-gray-400">PDF · Updated 2026</span>
+            <span className="text-xs !text-gray-400">PDF · Updated 2026</span>
           </motion.div>
 
           {/* Divider */}
           <div className="w-full h-px bg-white/10 my-4" />
 
           {/* Snapshot Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-sm text-gray-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-sm !text-gray-300">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-400">Role</span>
+              <span className="!text-gray-400">Role</span>
               <p>Full-Stack Developer</p>
             </motion.div>
             <motion.div
@@ -64,7 +64,7 @@ export default function ResumeSection() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-400">Stack</span>
+              <span className="!text-gray-400">Stack</span>
               <p>MERN · Next.js</p>
             </motion.div>
             <motion.div
@@ -73,7 +73,7 @@ export default function ResumeSection() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-400">Focus</span>
+              <span className="!text-gray-400">Focus</span>
               <p>Frontend, UI/UX</p>
             </motion.div>
             <motion.div
@@ -82,7 +82,7 @@ export default function ResumeSection() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-400">Availability</span>
+              <span className="!text-gray-400">Availability</span>
               <p>Open to Internships</p>
             </motion.div>
           </div>
@@ -100,7 +100,7 @@ export default function ResumeSection() {
     px-3 py-2 sm:px-4 sm:py-2.5
     text-sm sm:text-base
     rounded-lg
-    bg-white/8 text-gray-200 border border-white/20
+    bg-white/8 !text-gray-200 border border-white/20
     hover:bg-blue-500/20 hover:border-blue-400
     transition-all duration-300
     w-full sm:w-auto

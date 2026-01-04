@@ -99,7 +99,7 @@ flex items-center justify-center gap-3"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 text-xs rounded-lg
-bg-white/10 text-gray-200 font-medium tracking-wide"
+bg-white/10 !text-gray-200 font-medium tracking-wide"
                     >
                       Live
                     </a>
@@ -111,7 +111,7 @@ bg-white/10 text-gray-200 font-medium tracking-wide"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 text-xs rounded-lg
-bg-white/10 text-gray-200 font-medium tracking-wide"
+bg-white/10 !text-gray-200 font-medium tracking-wide"
                     >
                       GitHub
                     </a>
@@ -122,7 +122,7 @@ bg-white/10 text-gray-200 font-medium tracking-wide"
               {/* Content */}
               <div className="px-4 py-3 flex flex-col gap-1.5">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-white text-[15px] font-semibold tracking-wide">
+                  <h2 className="!text-gray-200 text-[15px] font-semibold tracking-wide">
                     {item.name}
                   </h2>
 

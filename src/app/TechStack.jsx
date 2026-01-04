@@ -56,7 +56,7 @@ export default function TechStack() {
     <section id="tech-stack" className="flex  flex-col px-4 sm:px-6">
       <div className="flex flex-col justify-start  w-full max-w-[590px]  py-4 mx-auto z-20 gap-8 mt-16">
         <motion.h1
-          className="font-semibold text-2xl text-white"
+          className="font-semibold text-2xl !text-gray-200"
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
@@ -86,7 +86,9 @@ export default function TechStack() {
               >
                 <div className="flex items-center gap-3">
                   <Icon size={24} className="text-white" />
-                  <span className="text-white font-medium">{tool.name}</span>
+                  <span className="!text-gray-200 font-medium">
+                    {tool.name}
+                  </span>
                 </div>
               </motion.div>
             );
