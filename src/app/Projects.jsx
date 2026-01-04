@@ -98,7 +98,7 @@ flex items-center justify-center gap-3"
                       href={item.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-xs rounded-full
+                      className="px-4 py-2 text-xs rounded-lg
 bg-white/10 text-gray-200 font-medium tracking-wide"
                     >
                       Live
@@ -110,7 +110,7 @@ bg-white/10 text-gray-200 font-medium tracking-wide"
                       href={item.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-xs rounded-full
+                      className="px-4 py-2 text-xs rounded-lg
 bg-white/10 text-gray-200 font-medium tracking-wide"
                     >
                       GitHub
