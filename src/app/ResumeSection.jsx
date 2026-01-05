@@ -38,7 +38,7 @@ export default function ResumeSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <span className="text-sm !text-gray-300 font-medium">
+            <span className="text-base !text-gray-200 font-medium">
               Hamna Liaquat
             </span>
             <span className="text-xs !text-gray-400">PDF · Updated 2026</span>
