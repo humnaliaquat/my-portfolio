@@ -93,7 +93,7 @@ export default function ResumeSection() {
           {/* CTA */}
           <div className="flex justify-center sm:justify-end">
             <motion.a
-              href="/resume/hamnaResume.pdf"
+              href="/resume/myresume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
